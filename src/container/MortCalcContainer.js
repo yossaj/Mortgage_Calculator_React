@@ -38,10 +38,13 @@ constructor(props){
 render(){
     console.log(this.state.combinedSalary)
     return(
-        <Fragment>
-            <MortCalcForm onSalarySubmit = {this.handleSalarySubmit}/>
-            <MortCalcEstimate salary1 ={this.state.salary1} salary2 = {this.state.salary2} combinedSalary = {this.state.combinedSalary} loan = {this.state.loan}/>
-        </Fragment> 
+        
+        <div id="input" class="container">
+                <MortCalcForm onSalarySubmit = {this.handleSalarySubmit}/>
+                <MortCalcEstimate salary1 ={this.state.salary1} salary2 = {this.state.salary2} combinedSalary = {this.state.combinedSalary} loan = {this.state.loan}/>
+            </div>
+        
+    
     )
 }
 

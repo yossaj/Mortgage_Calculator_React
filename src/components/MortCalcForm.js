@@ -35,26 +35,31 @@ class MortCalcForm extends Component {
 
     render() {
         return (
-            <Fragment>
-            <h1>Hello</h1>
-                <form className="comment-form" onSubmit= {this.handleSubmit}>
-                    <label>Your Salary</label>
-                    <input
-                        type="number"
-                        placeholder="Salary"
-                        value = {this.state.customer_salary}
-                        onChange ={this.handleChangeCustSalary}
-                    />
-                    <label>Your Partner's Salary</label>
-                    <input
-                        type="number"
-                        placeholder="Salary"
-                        value = {this.state.cust_partner_salary}
-                        onChange={this.handleChangeCustPartSalary}
-                    />
-                    <input type="submit" value="Post" />
-                </form>
-            </Fragment>
+            <div className="row text-center">
+                <div className="col-12 narrow text-center">
+                <h1>Hello</h1>
+            
+                    <form className="comment-form" onSubmit= {this.handleSubmit}>
+                        <label>Your Salary</label>
+                         <input
+                            type="number"
+                            placeholder="Salary"
+                            value = {this.state.customer_salary}
+                            onChange ={this.handleChangeCustSalary}
+                            />                                          
+                        <label>Your Partner's Salary</label>
+                            <input
+                                type="number"
+                                placeholder="Salary"
+                                value = {this.state.cust_partner_salary}
+                                onChange={this.handleChangeCustPartSalary}
+                            />
+                             <input type="submit" value="Post" />
+                     
+                    </form>
+                </div>
+            </div>
+         
          )
     }
 }
