@@ -4,8 +4,8 @@ class MortCalcForm extends Component {
     constructor(props){
         super(props);
         this.state = {
-            customer_salary: 0,
-            cust_partner_salary: 0
+            customer_salary: undefined,
+            cust_partner_salary: undefined
         }
 
         this.handleChangeCustSalary = this.handleChangeCustSalary.bind(this)
@@ -16,8 +16,8 @@ class MortCalcForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const customer_salary = this.state.customer_salary.trim();
-        const cust_partner_salary = this.state.cust_partner_salary.trim();
+        const customer_salary = this.state.customer_salary;
+        const cust_partner_salary = this.state.cust_partner_salary;
         if (!customer_salary || !cust_partner_salary) {
             return
         }
